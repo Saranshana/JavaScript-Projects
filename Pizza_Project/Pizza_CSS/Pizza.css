@@ -1,0 +1,153 @@
+
+/* Main menu container */
+#menuBG {
+    width: 700px;
+    min-height: 500px;
+    margin: 10px auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Arrange Size, Meats and Vegetables in one row */
+#frmMenu {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+/* All three menu columns */
+.left,
+.middle,
+.right {
+    width: 200px;
+    min-height: 200px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* Menu headings */
+.menu h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+    color: rgb(233, 230, 12);
+}
+
+/* Receipt area */
+#cart {
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+    margin: 25px 0 0 0;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: visible;
+    border-top: 2px solid rgb(233, 230, 12);
+}
+
+/* Order details on the left */
+#showText {
+    width: 60%;
+    min-height: 150px;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    float: none;
+    overflow-wrap: anywhere;
+}
+
+/* Total price on the right */
+#totalPrice {
+    width: 40%;
+    min-height: 150px;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    float: none;
+    overflow-wrap: anywhere;
+}
+
+/* Receipt headings */
+#showText h3,
+#totalPrice h3 {
+    font-family: Georgia, serif;
+    color: rgb(233, 230, 12);
+    margin-top: 0;
+}
+
+/* Place Order button */
+#btnOrder {
+    margin: 10px 0 0 20px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Page background */
+body {
+    background-color: rgb(67, 16, 219);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main heading */
+h1 {
+    font-family: Arial, sans-serif;
+    color: darkred;
+    margin-bottom: 10px;
+}
+
+/* All h3 headings */
+h3 {
+    font-family: Georgia, serif;
+    color: rgb(233, 230, 12);
+}
+
+/* Font family and text color */
+div {
+    font-family: Verdana, sans-serif;
+    color: rgb(240, 240, 248);
+}
+
+/* Make input controls easier to see */
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Keep the menu readable on smaller screens */
+@media (max-width: 740px) {
+    #menuBG {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #frmMenu {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .left,
+    .middle,
+    .right {
+        width: calc(50% - 10px);
+        min-width: 150px;
+        flex-shrink: 1;
+    }
+
+    #cart {
+        width: 100%;
+    }
+}
