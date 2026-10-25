@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Sets the title shown in the browser tab -->
+    <title>My First jQuery Event</title>
+
+    <!-- Loads the jQuery library from Google's CDN alternative -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Main heading of the webpage -->
+    <h1>My First jQuery Project</h1>
+
+    <!-- Paragraph that will be shown or hidden -->
+    <p id="message">Hello! I am learning jQuery.</p>
+
+    <!-- Button used to display the paragraph -->
+    <button id="showBtn">Show Message</button>
+
+    <!-- Button used to hide the paragraph -->
+    <button id="hideBtn">Hide Message</button>
+
+    <script>
+        // Wait until the HTML document is fully loaded
+        $(document).ready(function() {
+
+            // Select the Show Message button and listen for a click
+            $("#showBtn").on("click", function() {
+
+                // Display the paragraph when the button is clicked
+                $("#message").show();
+
+            });
+
+            // Select the Hide Message button and listen for a click
+            $("#hideBtn").on("click", function() {
+
+                // Hide the paragraph when the button is clicked
+                $("#message").hide();
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
+
